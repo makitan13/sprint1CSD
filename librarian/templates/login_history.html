@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content%} 
+<!DOCTYPE html>
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Librarian Login History</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/home">Dashboard</a></li>
+        <li class="breadcrumb-item active">Librarian</li>
+        <li class="breadcrumb-item active">Login History</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-body">
+            All of the Librarian Login History that already registered this far    
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Librarian Login History Table
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+            <thead >
+            <tr>
+                <th>Librarian History</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for login_history in librarian_login_history%}
+            <tr>
+                <td>{{login_history.librarian}} <b>Login At</b> {{login_history.date_login}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+{% endblock content%}
