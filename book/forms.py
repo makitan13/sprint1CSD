@@ -11,7 +11,8 @@ class BookForm(ModelForm):
             'author': forms.TextInput(attrs={'class':"form-control"}),
             'isbn': forms.TextInput(attrs={'class':"form-control"}),
             'published_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            
+            'category': forms.Select(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class':'form-control'}),
         }
 
 

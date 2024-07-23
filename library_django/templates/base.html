@@ -53,10 +53,23 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Member
                             </a>
-                            <a class="nav-link" href="/bookloan/list">
+                            <a class="nav-link btn btn-toggle collapsed" data-bs-toggle = "collapse" data-bs-target="#bookloan" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Book Loan
                             </a>
+                                <div class="collapse hide" id="bookloan">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                      <li><a href="/bookloan/list" class="nav-link">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                        Bookloan List</a></li>
+                                      <li><a href="/bookloan/outstand/list" class="nav-link">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-warning"></i></div>
+                                        Bookloan Outstanding</a></li>
+                                      <li><a href="/bookloan/overdue/list" class="nav-link">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-radiation"></i></div>
+                                        Bookloan Overdue</a></li>
+                                    </ul>
+                                  </div>
                             <a class="nav-link" href="/librarian/list">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
                                 Librarian

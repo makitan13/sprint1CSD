@@ -21,7 +21,7 @@
             Book Loan List Table
         </div>
         <div class="card-body">
-            <table id="datatablesSimple">
+            <table class="table table-bordered table-stripped">
         <thead>
             <tr>
                 <th>Book</th>
@@ -31,15 +31,14 @@
                 <th>Due Date</th>
                 <th>Return Date</th>
                 <th>Action</th>
-                
             </tr>
         </thead>
         <tbody>
             {% for bookloan in bookloan_list%}
             <tr>
-                <td>{{bookloan.book}}</td>
-                <td>{{bookloan.member}}</td>
-                <td>{{bookloan.librarian}}</td>                           
+                <td>{{bookloan.book_title}}</td>
+                <td>{{bookloan.member_name}}</td>
+                <td>{{bookloan.librarian_name}}</td>                           
                 <td>{{bookloan.loan_date}}</td>                           
                 <td>{{bookloan.due_date}}</td>                           
                 <td>{{bookloan.return_date}}</td>

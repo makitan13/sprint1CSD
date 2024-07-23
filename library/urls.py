@@ -20,11 +20,12 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include ('library_api.urls')),
     path('', include ('library_django.urls')),
     path('', include('django.contrib.auth.urls')),
     path('', include ('book.urls')),
     path('', include ('member.urls')),
     path('', include ('librarian.urls')),
-    path('', include ('bookloan.urls'))
+    path('', include ('bookloan.urls')),
     
 ]

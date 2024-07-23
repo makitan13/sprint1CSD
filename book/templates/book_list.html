@@ -21,30 +21,23 @@
                 Book List Table
             </div>
             <div class="card-body">
-                <table id="datatablesSimple">
+                <table class="table table-stripped">
                     <thead>
                         <tr>
                             <th>Title</th>
                             <th>Author</th>
+                            <th>Category</th>
                             <th>ISBN</th>
                             <th>Published Date</th>
                             <th>Action</th>
-                        </tr>
+                        </tr> 
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>ISBN</th>
-                            <th>Published Date</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         {% for book in book_list%}
                         <tr>
-                            <td>{{book.title}}</td>
+                            <td><a href = {% url 'detail_book' book.id%}> {{book.title}}</a></td>
                             <td>{{book.author}}</td>
+                            <td>{{book.category_name}}</td>
                             <td>{{book.isbn}}</td>                           
                             <td>{{book.published_date}}</td>
                             <td>
